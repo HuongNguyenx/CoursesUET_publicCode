@@ -3,6 +3,14 @@ using namespace std;
 
 char hada[1000][1000];
 
+int cal(int n){
+	int t=1;
+	for(int i=1; i<=n; i++){
+		t *= 2;
+	}
+	return t;
+}
+
 void solve(int n, int x, int y, int res){
 	if(n==1){
 		if(res==1) hada[x][y] = '+';
@@ -18,6 +26,7 @@ void solve(int n, int x, int y, int res){
 int main(){
 	int n;
 	cin >> n;
+	n = cal(n);
 	
 	solve(n, 0, 0, 1);
 	
